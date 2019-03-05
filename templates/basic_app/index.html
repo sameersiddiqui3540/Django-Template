@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    {% extends 'basic_app/base.html' %}
+        {% block body_block %}
+            <h1>Welcome to index.</h1>
+            <h1>This is index.html page showing!</h1>
+
+            <!--Next two tag uses built-in django template filter-->
+            <!--<h2> {{ got|title }} </h2>-->
+            <!--<h2> {{ num|add:"1" }} </h2>-->
+
+            <!-- custom template filter-->
+            <h1>{{ got|cut:"is" }}</h1> <!-- using register -->
+            <h1> {{ got|cut:"coming" }}</h1> <!-- using decorator-->
+        {% endblock %}
